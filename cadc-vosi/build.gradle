@@ -15,6 +15,8 @@ repositories {
     }
 }
 
+jar.archiveName = "cadc-vosi.jar"
+
 sourceCompatibility = 1.7
 
 group = 'org.opencadc'
@@ -30,9 +32,12 @@ dependencies {
     runtime 'org.jdom:jaxen-core:1.+'
     runtime 'org.jdom:jaxen-jdom:1.+'
 
-    compile 'org.opencadc:cadc-util:1.+'
-    compile 'org.opencadc:cadc-log:1.+'
-    compile 'org.opencadc:cadc-registry:1.+'
+    //compile 'org.opencadc:cadc-util:1.+'
+    //compile 'org.opencadc:cadc-log:1.+'
+    //compile 'org.opencadc:cadc-registry:1.+'
+    compile files('/home/bertocco/opt/opencadc/projects/core/cadc-util/build/libs/cadc-util.jar')
+    compile files('/home/bertocco/opt/opencadc/projects/core/cadc-log/build/libs/cadc-log.jar')
+    compile files('/home/bertocco/opt/opencadc/projects/reg/cadc-registry/build/libs/cadc-registry.jar')
 
     testCompile 'junit:junit:4.+'
     testCompile 'org.easymock:easymock:3.+'
